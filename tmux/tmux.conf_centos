@@ -92,5 +92,18 @@ set -g status-interval 1
 
 setw -g automatic-rename on
 
+
+
+# vi mode
 set -g status-keys vi
 setw -g mode-keys vi
+
+# copy mode
+# enter copy mode (prefix Escape)
+  #bind Escape copy-mode
+# paste buffer (prefix Ctrl+p)
+  #bind ^p pasteb
+# select (v)
+bind -t vi-copy v begin-selection
+# copy (y)
+bind -t vi-copy y copy-selection
